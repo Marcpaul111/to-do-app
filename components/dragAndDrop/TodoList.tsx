@@ -15,27 +15,25 @@ const TodoList = (props: TodoListProps) => {
   const { isOver, setNodeRef } = useDroppable({ id: level });
 
   const style = {
-    backgroundColor: "#F7FAFB",
-    minHeight: "600px",
-    border: isOver ? "2px solid green" : "none",
-    borderRadius: "4px",
-    padding: "10px",
+    backgroundColor: '#F7FAFB',
+    minHeight: '600px',
+    border: isOver ? '2px solid green' : 'none',
+    borderRadius: '4px',
+    padding: '10px',
   };
 
   return (
- 
-      <Grid item xs={12} sm={6} md={4} lg={3} >
-        <Stack spacing={2} sx={style} ref={setNodeRef}>
-          <Box>
-            <Typography variant="h6">{level}</Typography>
-            <Divider />
-          </Box>
-          {todos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} refreshTodos={refreshTodos} />
-          ))}
-        </Stack>
-      </Grid>
- 
+    <Grid item xs={12} sm={6} md={4} lg={3}>
+      <Stack spacing={2} sx={style} ref={setNodeRef}>
+        <Box>
+          <Typography variant='h6'>{level}</Typography>
+          <Divider />
+        </Box>
+        {todos.map((todo) => (
+          <TodoItem key={todo.id} todo={todo} refreshTodos={refreshTodos} />
+        ))}
+      </Stack>
+    </Grid>
   );
 };
 
