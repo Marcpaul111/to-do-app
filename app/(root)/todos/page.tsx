@@ -26,7 +26,7 @@ const TodosPage = () => {
 
     const pointerSensor = useSensor(PointerSensor, {
         activationConstraint: {
-            delay: 250,
+            delay: 0,
             tolerance: 5,
         },
     });
